@@ -24,6 +24,10 @@ h1 {
     padding: 3% 0 0;
 }
 
+h2 {
+    text-align: center;
+}
+
 .formulario {
     margin: -5rem auto 0 auto;
     width: 95%;
@@ -45,8 +49,8 @@ h1 {
 }
 
 .campo__label--textarea {
-    flex: 0.7;
-    height: 200px;
+    flex: 0.9;
+    height: 500px;
 }
 
 .boton {
@@ -59,4 +63,10 @@ h1 {
     padding: 1rem 1rem;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.final {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
