@@ -55,8 +55,6 @@ h2 {
 
 .boton {
     display: inline-block;
-    margin-left: 8rem;
-    margin-right: -7rem;
     background-color: var(--negro);
     font-family: var(--fuenteHeading);
     color: var(--blanco);

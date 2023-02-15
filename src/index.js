@@ -1,24 +1,20 @@
 import cipher from "./cipher.js";
 
-cipher.encode(3, "teamo");
-cipher.decode(3, "vgcoq");
-
-//CIFRADO MENSAJE
-
-//ATRAER INFORNACION HTML
-let botonCifralo = document.getElementById("buttonEncode ");
-botonCifralo.addEventListener("click", encondeHander);
-let botonDecifralo = document.getElementById("buttonDecode ");
-botonDecifralo.addEventListener("click", decodeHander);
-
+//ATRAER INFORMACION HTML
 function encondeHander() {
-    console.log("dentro del encode handler");
-    var mensajeIngresado = document.getElementById('mensaje').value;
-    cipher.encode(3, mensajeIngresado);
+    let mensajeIngresado = document.getElementById('mensaje').value;
+    let mensajeCifrado = cipher.encode(3, mensajeIngresado);
+    document.getElementById('mensaje').value = mensajeCifrado;
+    console.log(mensajeCifrado);
 }
 
 function decodeHander() {
-    console.log("dentro del encode handler");
-    var mensajeIngresado = document.getElementById('mensaje').value;
+    let mensajeIngresado = document.getElementById('mensaje').value;
     cipher.decode(3, mensajeIngresado);
 }
+
+let botonCifralo = document.getElementById("buttonEncode");
+botonCifralo.addEventListener("click", encondeHander);
+
+let botonDecifralo = document.getElementById("buttonDecode");
+botonDecifralo.addEventListener("click", decodeHander);

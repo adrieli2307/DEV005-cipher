@@ -10,6 +10,7 @@ const cipher = {
             mensajecifrado = mensajecifrado.concat(nuevaletra);
         }
         console.log(mensajecifrado);
+        return mensajecifrado;
     },
     decode: function(offset, message) {
         let abecedario = "abcdefghijklmnopqrstuvwxyz";
@@ -22,6 +23,7 @@ const cipher = {
             mensajedescifrado = mensajedescifrado.concat(nuevaletra);
         }
         console.log(mensajedescifrado);
+        return mensajedescifrado;
     },
 };
 
