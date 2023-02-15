@@ -49,8 +49,8 @@ h2 {
 }
 
 .campo__label--textarea {
-    flex: 0.9;
-    height: 500px;
+    flex: 0.7;
+    height: 300px;
 }
 
 .boton {

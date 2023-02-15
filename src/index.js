@@ -10,7 +10,9 @@ function encondeHander() {
 
 function decodeHander() {
     let mensajeIngresado = document.getElementById('mensaje').value;
-    cipher.decode(3, mensajeIngresado);
+    let mensajedescifrado = cipher.encode(-3, mensajeIngresado);
+    document.getElementById('mensaje').value = mensajedescifrado;
+    console.log(mensajedescifrado);
 }
 
 let botonCifralo = document.getElementById("buttonEncode");
