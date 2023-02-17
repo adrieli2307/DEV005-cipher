@@ -1,22 +1,22 @@
 import cipher from "./cipher.js";
 
 //ATRAER INFORMACION HTML
-function encondeHander() {
+function encondeHandler() {
     let mensajeIngresado = document.getElementById('mensaje').value;
     let mensajeCifrado = cipher.encode(3, mensajeIngresado);
     document.getElementById('mensaje').value = mensajeCifrado;
     console.log(mensajeCifrado);
 }
 
-function decodeHander() {
+function decodeHandler() {
     let mensajeIngresado = document.getElementById('mensaje').value;
-    let mensajedescifrado = cipher.encode(-3, mensajeIngresado);
+    let mensajedescifrado = cipher.decode(3, mensajeIngresado);
     document.getElementById('mensaje').value = mensajedescifrado;
     console.log(mensajedescifrado);
 }
 
 let botonCifralo = document.getElementById("buttonEncode");
-botonCifralo.addEventListener("click", encondeHander);
+botonCifralo.addEventListener("click", encondeHandler);
 
 let botonDecifralo = document.getElementById("buttonDecode");
-botonDecifralo.addEventListener("click", decodeHander);
+botonDecifralo.addEventListener("click", decodeHandler);

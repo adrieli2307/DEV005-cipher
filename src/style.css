@@ -8,17 +8,14 @@
 }
 
 body {
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cc7145ea-ff10-43e9-ad93-a9a444bfb93f/d3ewtey-871b6b63-300a-4ac8-8072-c3ebc4ad44d1.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NjNzE0NWVhLWZmMTAtNDNlOS1hZDkzLWE5YTQ0NGJmYjkzZlwvZDNld3RleS04NzFiNmI2My0zMDBhLTRhYzgtODA3Mi1jM2ViYzRhZDQ0ZDEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LF7wMV_EYjYnW_sHpXQvrn134cysaKDE_yyI2tV_AM4");
-    height: 60rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a3/DickseeRomeoandJuliet.jpg");
+    background-position: center cover;
 }
 
 h1 {
     font-size: 3rem;
     text-align: center;
-    background: linear-gradient(red, rgb(53, 50, 51));
+    background: linear-gradient(rgb(238, 255, 0), rgb(240, 240, 219));
     -webkit-background-clip: text;
     color: transparent;
     padding: 3% 0 0;
@@ -26,6 +23,8 @@ h1 {
 
 h2 {
     text-align: center;
+    color: var(--blanco);
+    font-weight: bold;
 }
 
 .formulario {
@@ -46,6 +45,7 @@ h2 {
     padding-right: 1rem;
     font-weight: bold;
     font-size: 1.5rem;
+    color: #e1e1e1;
 }
 
 .campo__label--textarea {
@@ -67,4 +67,5 @@ h2 {
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+    color: #e1e1e1;
 }
