@@ -6,6 +6,7 @@ function encondeHandler() {
     let mensajeCifrado = cipher.encode(3, mensajeIngresado);
     document.getElementById('mensaje').value = mensajeCifrado;
     console.log(mensajeCifrado);
+    // desactivar boton
 }
 
 function decodeHandler() {

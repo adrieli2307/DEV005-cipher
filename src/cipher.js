@@ -1,12 +1,21 @@
 const cipher = {
     encode: function(offset, message) {
-        let abecedario = "abcdefghijklmnopqrstuvwxyz";
+        let abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         let mensajecifrado = "";
         for (let i = 0; i < message.length; i++) {
             let letraactual = message.charAt(i);
             let nuevaletra = "";
-            if (letraactual == " ") {
-                nuevaletra = " "
+
+            // Revisar si es minuscula
+            if (letraactual == letraactual.toLowerCase()) {
+                abecedario = abecedario.toLowerCase();
+            } else {
+                abecedario = abecedario.toUpperCase();
+            }
+
+            // Revisar si existe en el vocabulario
+            if (abecedario.indexOf(letraactual) == -1) {
+                nuevaletra = letraactual;
             } else {
                 let posicionactual = abecedario.indexOf(letraactual);
                 let nuevaposicion = posicionactual + offset;
@@ -14,24 +23,12 @@ const cipher = {
             }
             mensajecifrado = mensajecifrado.concat(nuevaletra);
         }
+
         console.log(mensajecifrado);
         return mensajecifrado;
     },
     decode: function(offset, message) {
-        let abecedario = "abcdefghijklmnopqrstuvwxyz";
-        let mensajedescifrado = "";
-        for (let i = 0; i < message.length; i++) {
-            let letraactual = message.charAt(i);
-            let nuevaletra = "";
-            if (letraactual == " ") {
-                nuevaletra = " "
-            } else {
-                let posicionactual = abecedario.indexOf(letraactual);
-                let nuevaposicion = posicionactual - offset;
-                nuevaletra = abecedario.charAt(nuevaposicion % 26);
-            }
-            mensajedescifrado = mensajedescifrado.concat(nuevaletra);
-        }
+        let mensajedescifrado = this.encode(-offset, message)
         console.log(mensajedescifrado);
         return mensajedescifrado;
     },
