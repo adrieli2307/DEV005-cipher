@@ -16,32 +16,11 @@
 
 ## 1. Preámbulo
 
-Cifrar significa ocultar el contenido de un mensaje a simple vista, de manera
-que sólo las partes autorizadas pueden descifrar un texto cifrado.
-El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
-es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
-César lo usaba para enviar órdenes secretas a sus generales en los campos de
-batalla.
+Cifrado Cesar se clasifica como un cifrado por sustitución en el que el alfabeto en el texto plano se desplaza por un número fijo en el alfabeto, 
+cuentan los antiguos escritos romanos que el emperador Julio César utilizaba este tipo de encriptación para cifrar sus mensajes militares y que 
+sus enemigos no pudieran leerlos si capturaban al mensajero.
 
-El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es
-un tipo de cifrado por sustitución, es decir que cada letra del texto original
-es reemplazada por otra que se encuentra un número fijo de posiciones
-(desplazamiento) más adelante en el mismo alfabeto.
-
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
-
-Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
-
-* La letra A se cifra como D.
-* La palabra CASA se cifra como FDVD.
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-
-En la actualidad, todos los cifrados de sustitución simple se descifran con
-mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
-comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas
-más complejos de codificación, como el cifrado Vigenère, e incluso tiene
-aplicación en el sistema ROT13.
+(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBuqkRDlS4vNN4bMPQk7KrxuF7fxsy6fpbTraUXh92iZZHeQXkdKk5sS2f62muCu-cnw&usqp=CAU)
 
 ## 2. Resumen del proyecto
 

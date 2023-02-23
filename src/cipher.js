@@ -6,14 +6,14 @@ const cipher = {
       const letraactual = message.charAt(i);
       let nuevaletra = "";
       // Revisar si es minuscula
-      if (letraactual == letraactual.toLowerCase()) {
+      if (letraactual === letraactual.toLowerCase()) {
         abecedario = abecedario.toLowerCase();
       } else {
         abecedario = abecedario.toUpperCase();
       }
 
       // Revisar si existe en el vocabulario
-      if (abecedario.indexOf(letraactual) == -1) {
+      if (abecedario.indexOf(letraactual) === -1) {
         nuevaletra = letraactual;
       } else {
         const posicionactual = abecedario.indexOf(letraactual);
@@ -22,13 +22,10 @@ const cipher = {
       }
       mensajecifrado = mensajecifrado.concat(nuevaletra);
     }
-
-    console.log(mensajecifrado);
     return mensajecifrado;
   },
   decode: function (offset, message) {
     const mensajedescifrado = this.encode(-offset, message)
-    console.log(mensajedescifrado);
     return mensajedescifrado;
   },
 };
