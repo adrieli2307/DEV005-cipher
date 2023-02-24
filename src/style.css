@@ -63,6 +63,16 @@ h2 {
     cursor: pointer;
 }
 
+.cantidad1 {
+    border: none;
+    font-size: 1rem;
+    font-family: var(--fuenteHeading);
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
 .final {
     text-align: center;
     font-weight: bold;

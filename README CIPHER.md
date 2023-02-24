@@ -4,8 +4,8 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Hito: Criterios de aceptación mínimos del proyecto](#4-hito-criterios-de-aceptación-mínimos-del-proyecto)
+* [3. ¿Quiénes son los principales usuarios de producto?](#3-Quiénes-son-los-principales-usuarios-de-producto)
+* [4. ¿Cuáles son los objetivos de estos usuarios en relación con tu producto?](#4-Cuáles-son-los-objetivos-de-estos-usuarios-en-relación-con-tu-producto)
 * [5. Hito Opcional: Agrega soporte para minúsculas y otros caracteres](#5-hito-opcional-agrega-soporte-para-minúsculas-y-otros-caracteres)
 * [6. Consideraciones técnicas](#6-consideraciones-técnicas)
 * [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
@@ -20,88 +20,47 @@ Cifrado Cesar se clasifica como un cifrado por sustitución en el que el alfabet
 cuentan los antiguos escritos romanos que el emperador Julio César utilizaba este tipo de encriptación para cifrar sus mensajes militares y que 
 sus enemigos no pudieran leerlos si capturaban al mensajero.
 
-(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBuqkRDlS4vNN4bMPQk7KrxuF7fxsy6fpbTraUXh92iZZHeQXkdKk5sS2f62muCu-cnw&usqp=CAU)
+![caeser-cipher](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBuqkRDlS4vNN4bMPQk7KrxuF7fxsy6fpbTraUXh92iZZHeQXkdKk5sS2f62muCu-cnw&usqp=CAU)
+
+Para codificar un mensaje, simplemente se debe buscar cada letra de la línea del texto original y escribir la letra correspondiente en la línea codificada, 
+en el caso si se va a decodificarlo se debe hacer lo contrario.
+
+Si se realiza un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A ), la B sería reemplazada por la E, etc.
+
+Ejemplo: 
+
+El siguiente mensaje sin Cifrado Cesar : 
+-  "Eres el amor de mi vida y te amo"
+
+Con Cifrado Cesar especificar:
+- "Lylz ls htvy kl tp cpkh f al htv"
 
 ## 2. Resumen del proyecto
 
-En este proyecto crearás una aplicación web que servirá para que tu usuaria
-pueda cifrar y descifrar un texto en el navegador indicando un desplazamiento
-específico de caracteres (_offset_). Lo harás utilizando HTML, CSS y JavaScript.
+En este proyecto se creó una aplicación web que servirá para que se pueda cifrar y descifrar un texto o mensaje en el navegador.
 
-La temática es libre. Piensa en qué situaciones se necesitaría cifrar un mensaje.
-Decide cómo debe ser esa experiencia de uso (qué pantallas, explicaciones, mensajes,
-colores, etc.) Algunas ideas de ejemplo:  
+La tematica de este proyecto fue las cartas de amor, tomando como base a Romeo y Julieta, dos
+amantes que tuvieron un tragico final por haberse querido tanto pero que sus familias no los aceptaban.
 
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
-  una zona de conflicto.
-* Mensajería secreta para parejas.
+![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/a/a3/DickseeRomeoandJuliet.jpg
 
-Como continuación del proyecto de preadmisión, volverás a trabajar sobre
-fundamentos de JavaScript, incluyendo conceptos como variables, condicionales,
-y funciones, así como eventos y manipulación básica del DOM, fundamentos de
-HTML y CSS. Mientras desarrollas este proyecto, te familiarizarás con nuevos
-conceptos también.
+Con esta pagina, podran ingresar mensajes que desen que solo sus parejas sepan cual es su significado.
 
 ### Los objetivos generales de este proyecto son los siguientes
 
-* Trabajar en base a un boilerplate, la estructura básica de un proyecto en
-  distintas carpetas (a través modulos en JS).
-* Conocer las herramientas de mantenimiento y mejora del código (linters y
-  pruebas unitarias).
-* Aprender sobre objetos, estructuras, métodos e iteración (bucles)
-  en JavaScript
-* Implementar control de versiones con git (y la plataforma github)
+* Crear una pagina de cifrado y decifrado seguro.
+* La pagina sera de facil accesibilidad y manejo.
+* Salvaguardar los mensajes ingresados.
 
-## 3. Consideraciones generales
+## 3. Quiénes son los principales usuarios de producto
 
-* Este proyecto lo resolvemos de manera **individual**. Te recomendamos una
-  duracion de 1-3 sprints.
-* Enfócate en aprender y no solamente en "completar" el proyecto.
-* Te sugerimos que no intentes saberlo todo antes de empezar a codear.
-  No te preocupes demasiado ahora por lo que _todavía_ no entiendas.
-  Irás aprendiendo.
+Los principales usuarios de nuestro producto serian parejas de enamorados, que por alguna circunstancia ajena a su vida no pueden estar juntos o quieran darle algo de misterio a su relacion.
 
-## 4. Hito: Criterios de aceptación mínimos del proyecto
+Adicional se podria implementar como una pagina para practicar a ser detectives de mensajes secretos, al se una interfaz accesible la pueden usar sin ningun problema o complicación. 
 
-Estos son los requisitos que tu proyecto debe que cumplir para asegurar que tu trabajo
-cubra los objetivos principales.  
+## 4. Cuáles son los objetivos de estos usuarios en relación con tu producto
+*
 
-**1. Una interfaz que debe permitir a la usuaria:**
-
-* **Cifrar un mensaje**
-  - Insertar el mensaje (texto) que quiere cifrar. El mensaje usa alfabeto
-    simplificado (solamente mayúsculas y sin ñ).
-  - Elegir un numero de desplazamiento (_offset_) indicando cuántas
-    posiciones quieres que el cifrado desplace cada caracter en el alfabeto.
-    El numero sera positivo y entero (positive integer).
-  - Ver el resultado del mensaje cifrado.
-
-* **Descifrar un mensaje**
-  - Insertar el mensaje (texto) que quieres descifrar. El mensaje usa alfabeto
-    simplificado (solamente mayúsculas y sin ñ).
-  - Elegir un numero desplazamiento (_offset_, que corresponda al que usamos
-    para cifrar) indicando cuántas posiciones quieres que
-    el cifrado desplace cada caracter en el alfabeto. El numero sera positivo y
-    entero (positive integer).
-  - Ver el resultado del mensaje descifrado.
-
-**2. Pruebas unitarios de los métodos.**  
-Los metódos de `cipher` (`encode` y `decode`) deben tener cobertura con
-pruebas unitarias.
-
-**3. Código de tu proyecto subido a tu repo y interfaz "desplegada".**  
-El código final debe estar subido en un repositorio en GitHub.  
-La interfaz o pagina web, debe ser "desplegada" usando GitHub Pages.
-
-**4. Un README que contiene una definición del producto.**  
-En el README cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz. Estas
-preguntas sirven como guia:
-
-* Quiénes son los principales usuarios de producto
-* Cuáles son los objetivos de estos usuarios en relación con tu producto
 * Cómo crees que el producto que estás creando está resolviendo sus problemas
 
 Con estos requisitos cumplidos puedes agendar un Project Feedback con unx coach.

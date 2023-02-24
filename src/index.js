@@ -2,17 +2,19 @@ import cipher from "./cipher.js";
 
 //ATRAER INFORMACION HTML
 function encondeHandler() {
+  const cantidad = document.getElementById('cantidad').value;
   const mensajeIngresado = document.getElementById('mensaje').value;
-  const mensajeCifrado = cipher.encode(33, mensajeIngresado);
+  const mensajeCifrado = cipher.encode(Number(cantidad), mensajeIngresado);
   document.getElementById('mensaje').value = mensajeCifrado;
-  // desactivar boton
+  // Desactivar boton
   botonCifralo.disabled = true;
   botonDecifralo.disabled = false;
 }
 
 function decodeHandler() {
+  const cantidad = document.getElementById('cantidad').value;
   const mensajeIngresado = document.getElementById('mensaje').value;
-  const mensajedescifrado = cipher.decode(33, mensajeIngresado);
+  const mensajedescifrado = cipher.decode(Number(cantidad), mensajeIngresado);
   document.getElementById('mensaje').value = mensajedescifrado;
   botonCifralo.disabled = false;
   botonDecifralo.disabled = true;
