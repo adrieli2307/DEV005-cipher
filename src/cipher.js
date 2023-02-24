@@ -21,8 +21,12 @@ const cipher = {
           nuevaletra = letraactual;
         } else {
           const posicionactual = abecedario.indexOf(letraactual);
-          const nuevaposicion = posicionactual + offset;
-          nuevaletra = abecedario.charAt(nuevaposicion % 26);
+          let nuevaposicion = (posicionactual + offset) % 26;
+          if (nuevaposicion < 0) {
+            nuevaposicion = nuevaposicion + 26
+          }
+          nuevaletra = abecedario.charAt(nuevaposicion);
+          console.log(posicionactual + " " + nuevaposicion);
         }
         mensajecifrado = mensajecifrado.concat(nuevaletra);
       }
