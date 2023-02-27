@@ -54,7 +54,7 @@ Con esta página, podrán ingresar mensajes que desen que solo sus parejas sepan
 
 Los principales usuarios de nuestro producto serían parejas de enamorados, que por alguna circunstancia ajena a su vida no pueden estar juntos o quieran darle algo de misterio a su relación.
 
-Adicional se podría implementar como una página para practicar a ser detectives de mensajes secretos, al se una interfaz accesible la pueden usar sin ningún problema o complicación. 
+Adicional se podría implementar como una página para practicar a ser detectives de mensajes secretos, al ser una interfaz accesible la pueden usar sin ningún problema o complicación. 
 
 ## 4. Cuáles son los objetivos de estos usuarios en relación con tu producto
 * Tener un espacio seguro para poder compartir ideas o pensamientos secretos.
@@ -62,15 +62,20 @@ Adicional se podría implementar como una página para practicar a ser detective
 
 ## 5. Cómo crees que el producto que estás creando está resolviendo sus problemas
 
-Manteniendo el anonimato de sus escritos, crea una atmosfera de seguridad con la cual pueden expresarse libremente sin miedo a que puedan descubrir sus mensajes,eso es lo principal que buscan los usuarios de nuestra página.
+Manteniendo el anonimato de sus escritos, crea una atmosfera de seguridad con la cual pueden expresarse libremente sin miedo a que puedan descubrir sus mensajes, eso es lo principal que buscan los usuarios de nuestra página.
 
-Con ello estaremos cubriendo su principal necesidad de discresión.
+Con ello estaremos cubriendo su principal necesidad de discreción.
 
 ## 6. Consideraciones técnicas
 
-Con el fin de elaborar el proyecto, utilizamos Cipher Encode y Decode, añadiendo la siguiente función:
+Con el fin de elaborar el proyecto, utilizamos las funciones Encode y Decode:
 
- <function (offset, message)>
+```
+cipher.encode(offset, message)
+cipher.decode(offset, message)
+```
 
-En la cual establecimos todo lo que deseamos que realice nuestro código mediante if y else, y utilizando variables pudimos concluir con el proyecto para que pueda tener este aspecto.
+Estas funciones toman un valor numerico `offset` en el cual el mensaje `message` es cifrado utilizando Cifrado Cesar. Los detalles de la implementacion se encuentran en el archivo `/src/cipher.js`
+
+Debido a que las operaciones `encode` y `decode` son inversas se cambio en la funcion `decode` se uso un `offset` negativo.
 
