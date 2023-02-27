@@ -77,5 +77,4 @@ cipher.decode(offset, message)
 
 Estas funciones toman un valor numerico `offset` en el cual el mensaje `message` es cifrado utilizando Cifrado Cesar. Los detalles de la implementacion se encuentran en el archivo `/src/cipher.js`
 
-Debido a que las operaciones `encode` y `decode` son inversas se cambio en la funcion `decode` se uso un `offset` negativo.
-
+Debido a que las operaciones `encode` y `decode` son inversas, la función `decode` simplemente llama a la funcion `encode`, pero con un `offset` negativo.
