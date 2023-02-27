@@ -8,14 +8,12 @@ const cipher = {
       for (let i = 0; i < message.length; i++) {
         const letraactual = message.charAt(i);
         let nuevaletra = "";
-
         // Revisar si es minuscula
         if (letraactual === letraactual.toLowerCase()) {
           abecedario = abecedario.toLowerCase();
         } else {
           abecedario = abecedario.toUpperCase();
         }
-
         // Revisar si existe en el vocabulario
         if (abecedario.indexOf(letraactual) === -1) {
           nuevaletra = letraactual;
